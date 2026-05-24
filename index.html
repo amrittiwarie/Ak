@@ -3,399 +3,376 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amrit Tiwarie | Science Educator & Growth Mentor</title>
-  <meta name="description" content="Professional portfolio of Amrit Tiwarie, a passionate science teacher and self-development coach dedicated to inspiring curiosity and personal growth.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Amrit Tiwari — Developer & Creator. A professional portfolio showcasing projects, skills, and experience.">
+  <title>Amrit Tiwari — Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- --- Header / Navbar --- -->
-  <header>
-    <div class="container nav-wrapper">
-      <a href="#" class="logo">A.TIWARIE</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">Philosophy</a></li>
-        <li><a href="#timeline">Journey</a></li>
-        <li><a href="#lab">Interactive Lab</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <!-- ======================== NAVBAR ======================== -->
+  <header class="navbar" id="navbar">
+    <nav class="container navbar__inner" aria-label="Primary navigation">
+      <a href="#hero" class="navbar__logo" aria-label="Home">Amrit.</a>
+
+      <ul class="navbar__links" id="nav-links" role="list">
+        <li><a href="#about"      class="navbar__link" data-nav>About</a></li>
+        <li><a href="#experience" class="navbar__link" data-nav>Experience</a></li>
+        <li><a href="#projects"   class="navbar__link" data-nav>Projects</a></li>
+        <li><a href="#contact"    class="navbar__link" data-nav>Contact</a></li>
       </ul>
-      <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+
+      <div class="navbar__overlay" id="nav-overlay" aria-hidden="true"></div>
+
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </nav>
   </header>
 
-  <!-- --- Hero Section --- -->
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="hero-tagline">Science Educator & Mentor</p>
-        <h1 class="hero-title">Inspiring <span>Curious Minds</span> & Cultivating Growth.</h1>
-        <p class="hero-description">
-          Welcome! I am a biochemist, teacher, and life mentor. I combine scientific rigor with self-development strategies to help students discover the mysteries of nature while building their personal potential.
+  <main>
+    <!-- ======================== HERO ======================== -->
+    <section class="hero section" id="hero">
+      <div class="hero__bg">
+        <div class="hero__gradient" aria-hidden="true"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__greeting">Hello, I'm</p>
+        <h1 class="hero__name"><span>Amrit Tiwari</span></h1>
+        <p class="hero__tagline">Developer &amp; Creator</p>
+        <p class="hero__description">
+          I craft elegant, performant digital experiences with clean code and thoughtful design. Passionate about building products that make a difference.
         </p>
-        <div class="hero-buttons">
-          <a href="#lab" class="btn btn-primary">Enter the Lab</a>
-          <a href="#about" class="btn btn-outline">My Philosophy</a>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn--outline">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i> Get In Touch
+          </a>
         </div>
       </div>
-      
-      <div class="hero-visual">
-        <div class="atom-visualizer">
-          <div class="atom-nucleus"></div>
-          <div class="atom-orbit atom-orbit-1">
-            <div class="atom-electron electron-1"></div>
-          </div>
-          <div class="atom-orbit atom-orbit-2">
-            <div class="atom-electron electron-2"></div>
-          </div>
-          <div class="atom-orbit atom-orbit-3">
-            <div class="atom-electron electron-3"></div>
-          </div>
-        </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <i class="fa-solid fa-chevron-down"></i>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- --- About & Philosophy --- -->
-  <section class="about" id="about">
-    <div class="container">
-      <h2 class="section-title">Teaching <span>Philosophy</span></h2>
-      <div class="about-grid">
-        <div class="about-image-container">
-          <!-- Custom Premium SVG Illustration of Science and Growth -->
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Glowing background -->
-            <circle cx="100" cy="100" r="80" fill="url(#circleGlow)" opacity="0.15"/>
-            <!-- Brain / Tree Metaphor -->
-            <path d="M100 160V110" stroke="#6366f1" stroke-width="4" stroke-linecap="round"/>
-            <path d="M100 110C90 110 80 100 80 90C80 80 90 70 100 70C110 70 120 80 120 90C120 100 110 110 100 110Z" fill="#111827" stroke="#10b981" stroke-width="3"/>
-            <!-- Orbits around brain -->
-            <ellipse cx="100" cy="90" rx="40" ry="15" stroke="#6366f1" stroke-width="1.5" transform="rotate(-15 100 90)"/>
-            <ellipse cx="100" cy="90" rx="40" ry="15" stroke="#f59e0b" stroke-width="1.5" transform="rotate(15 100 90)"/>
-            <!-- Atoms and Leaves -->
-            <circle cx="65" cy="80" r="5" fill="#10b981"/>
-            <circle cx="135" cy="80" r="5" fill="#f59e0b"/>
-            <circle cx="100" cy="50" r="6" fill="#6366f1"/>
-            <path d="M100 115C108 115 112 125 105 132" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
-            <path d="M100 125C92 125 88 135 95 142" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
-            <defs>
-              <radialGradient id="circleGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100 100) rotate(90) scale(80)">
-                <stop offset="0%" stop-color="#6366f1"/>
-                <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-          </svg>
-        </div>
-        
-        <div class="philosophy-details">
-          <div class="philosophy-tabs">
-            <button class="tab-btn active" data-tab="science">Science Educator</button>
-            <button class="tab-btn" data-tab="growth">Self-Development Mentor</button>
-          </div>
-          
-          <div class="philosophy-content active" id="science">
-            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Demystifying the Cosmos & Nature</h3>
-            <p>
-              I believe science shouldn't be memorized; it should be experienced. My approach focuses on inquiry-based learning, active experimentation, and understanding the core principles that connect chemistry, physics, and biology.
-            </p>
-            <ul class="highlight-list science">
-              <li><strong>Interactive Simulators:</strong> Engaging students with virtual experiments that reinforce theoretical concepts.</li>
-              <li><strong>Real-World Context:</strong> Explaining molecular biology and physics through daily phenomena and biotechnology.</li>
-              <li><strong>Critical Thinking:</strong> Teaching students how to analyze evidence, question assumptions, and design controlled trials.</li>
-            </ul>
-          </div>
-          
-          <div class="philosophy-content" id="growth">
-            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Empowering the Whole Student</h3>
-            <p>
-              Academics are only one half of a student's journey. Through self-development mentoring, I guide teenagers and college students to build strong mental habits, emotional resilience, and lifelong learning techniques.
-            </p>
-            <ul class="highlight-list growth">
-              <li><strong>Habit Design:</strong> Utilizing systems from behavioral science to help students build consistent study routines.</li>
-              <li><strong>Mindset Training:</strong> Cultivating a growth mindset to view obstacles as essential pathways to learning.</li>
-              <li><strong>Life Goal Alignment:</strong> Helping students connect their daily academic pursuits to their broader personal goals.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Interactive Timeline Section --- -->
-  <section class="timeline-section" id="timeline">
-    <div class="container">
-      <h2 class="section-title">My Professional <span>Journey</span></h2>
-      <div class="timeline">
-        
-        <!-- Timeline Item 1 -->
-        <div class="timeline-item timeline-item-left">
-          <div class="timeline-badge badge-science">Education</div>
-          <div class="timeline-date">2024 - Present</div>
-          <div class="glass-card timeline-card">
-            <h3>Senior Science Instructor</h3>
-            <p>Leading high school biology and chemistry courses. Redesigned the lab curriculum to incorporate web-based simulations and computational molecular modeling.</p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 2 -->
-        <div class="timeline-item timeline-item-right">
-          <div class="timeline-badge badge-growth">Mentoring</div>
-          <div class="timeline-date">2022 - Present</div>
-          <div class="glass-card timeline-card">
-            <h3>Growth & Habit Coach</h3>
-            <p>Launched the "Strategic Student Program," a voluntary mentorship seminar teaching goal-setting, productivity systems, and emotional regulation techniques.</p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 3 -->
-        <div class="timeline-item timeline-item-left">
-          <div class="timeline-badge badge-science">Education</div>
-          <div class="timeline-date">2020 - 2022</div>
-          <div class="glass-card timeline-card">
-            <h3>M.S. in Science Education</h3>
-            <p>Specialized in digital learning systems and science communication. Thesis explored the efficacy of gamified simulations in understanding atomic theory.</p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 4 -->
-        <div class="timeline-item timeline-item-right">
-          <div class="timeline-badge badge-science">Research</div>
-          <div class="timeline-date">2016 - 2020</div>
-          <div class="glass-card timeline-card">
-            <h3>Biochemistry Researcher</h3>
-            <p>Conducted molecular modeling research on protein folding kinetics. Facilitated undergraduate biochemistry labs and peer tutor sessions.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Interactive Science Sandbox --- -->
-  <section class="lab-section" id="lab">
-    <div class="container">
-      <h2 class="section-title">Interactive <span>Science Sandbox</span></h2>
-      <div class="sandbox-wrapper">
-        
-        <div class="sandbox-container">
-          <div class="sandbox-header">
-            <span style="font-weight:600; font-family:var(--font-heading);">Interactive Atom Builder</span>
-            <div class="sandbox-status">
-              <span class="status-dot"></span>
-              <span id="systemStatus">Simulator Active</span>
-            </div>
-          </div>
-          
-          <canvas id="labCanvas" width="600" height="400"></canvas>
-          
-          <div class="sandbox-controls">
-            <div class="control-group">
-              <label>Protons (Positive)</label>
-              <div style="display:flex; gap:0.5rem; align-items:center;">
-                <button class="control-btn" id="btnSubProton">-</button>
-                <span id="protonCount" style="width:20px; text-align:center; font-weight:600;">1</span>
-                <button class="control-btn" id="btnAddProton">+</button>
-              </div>
-            </div>
-            
-            <div class="control-group">
-              <label>Neutrons (Neutral)</label>
-              <div style="display:flex; gap:0.5rem; align-items:center;">
-                <button class="control-btn" id="btnSubNeutron">-</button>
-                <span id="neutronCount" style="width:20px; text-align:center; font-weight:600;">0</span>
-                <button class="control-btn" id="btnAddNeutron">+</button>
-              </div>
-            </div>
-
-            <div class="control-group">
-              <label>Electrons (Negative)</label>
-              <div style="display:flex; gap:0.5rem; align-items:center;">
-                <button class="control-btn" id="btnSubElectron">-</button>
-                <span id="electronCount" style="width:20px; text-align:center; font-weight:600;">1</span>
-                <button class="control-btn" id="btnAddElectron">+</button>
-              </div>
-            </div>
-
-            <div class="control-group" style="justify-content: flex-end;">
-              <button class="control-btn" id="btnResetLab" style="background:rgba(244, 63, 94, 0.1); border-color:rgba(244, 63, 94, 0.3); color:#fb7185;">Reset Atom</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="sandbox-info">
-          <h3>Visualizing Chemistry</h3>
-          <p>
-            This interactive canvas simulator showcases the atomic Bohr model. Add particles to build elements from the periodic table, observe how stability shifts, and watch electrons orbit the nucleus.
+    <!-- ======================== ABOUT ======================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__subtitle">Get To Know Me</p>
+          <h2 class="section__title">About Me</h2>
+          <p class="section__description">
+            A brief introduction to who I am, what I do, and the technologies I work with.
           </p>
-          <p style="font-size:0.95rem; color:var(--text-secondary);">
-            Use this tool in your classroom to explore atomic mass, net charge, and element classification in real-time.
+        </div>
+
+        <div class="about__grid">
+          <!-- Left: Bio -->
+          <div class="about__text">
+            <p>
+              I'm a passionate developer with a deep interest in building beautiful, functional, and accessible web experiences. I enjoy the intersection of design and engineering — where clean code meets thoughtful UI.
+            </p>
+            <p>
+              Whether it's a complex web application, a clean landing page, or an open-source tool, I approach every project with curiosity and craftsmanship. I'm always learning and love exploring new technologies.
+            </p>
+
+            <div class="about__stats">
+              <div class="stat-card glass">
+                <span class="stat-card__number">10+</span>
+                <span class="stat-card__label">Projects</span>
+              </div>
+              <div class="stat-card glass">
+                <span class="stat-card__number">2+</span>
+                <span class="stat-card__label">Years Exp.</span>
+              </div>
+              <div class="stat-card glass">
+                <span class="stat-card__number">5+</span>
+                <span class="stat-card__label">Technologies</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Skills -->
+          <div>
+            <div class="skills__group">
+              <h3 class="skills__group-title">Languages</h3>
+              <div class="skills__list">
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">TypeScript</span>
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">HTML / CSS</span>
+                <span class="skill-chip">SQL</span>
+              </div>
+            </div>
+
+            <div class="skills__group">
+              <h3 class="skills__group-title">Frameworks & Tools</h3>
+              <div class="skills__list">
+                <span class="skill-chip">React</span>
+                <span class="skill-chip">Next.js</span>
+                <span class="skill-chip">Node.js</span>
+                <span class="skill-chip">Git & GitHub</span>
+                <span class="skill-chip">Figma</span>
+              </div>
+            </div>
+
+            <div class="skills__group">
+              <h3 class="skills__group-title">Concepts</h3>
+              <div class="skills__list">
+                <span class="skill-chip">Responsive Design</span>
+                <span class="skill-chip">REST APIs</span>
+                <span class="skill-chip">UI/UX Principles</span>
+                <span class="skill-chip">Accessibility</span>
+                <span class="skill-chip">Agile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== EXPERIENCE ======================== -->
+    <section class="section" id="experience" style="background: var(--color-slate-900);">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__subtitle">My Journey</p>
+          <h2 class="section__title">Experience</h2>
+          <p class="section__description">
+            Professional milestones and the path I've walked so far.
           </p>
-          
-          <div class="sandbox-element-info">
-            <h4 style="margin-bottom:0.8rem; font-family:var(--font-heading); color:var(--accent-science);">Atomic Analysis</h4>
-            <div class="element-grid">
-              <div class="element-stat">
-                <span class="stat-label">Identified Element</span>
-                <span class="stat-value" id="elementName">Hydrogen</span>
-              </div>
-              <div class="element-stat">
-                <span class="stat-label">Net Charge</span>
-                <span class="stat-value" id="elementCharge">Neutral (0)</span>
-              </div>
-              <div class="element-stat">
-                <span class="stat-label">Mass Number</span>
-                <span class="stat-value" id="elementMass">1</span>
-              </div>
-              <div class="element-stat">
-                <span class="stat-label">Nuclear Stability</span>
-                <span class="stat-value" id="elementStability" style="color:var(--accent-science);">Stable</span>
-              </div>
-            </div>
-          </div>
         </div>
-        
+
+        <ol class="timeline" role="list">
+          <li class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <span class="timeline__date">2024 — Present</span>
+            <div class="timeline__card glass">
+              <h3 class="timeline__role">Full-Stack Developer</h3>
+              <p class="timeline__company">Freelance / Personal Projects</p>
+              <p class="timeline__desc">
+                Building end-to-end web applications, contributing to open-source, and collaborating with small teams on real-world products using modern stacks.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <span class="timeline__date">2023 — 2024</span>
+            <div class="timeline__card glass">
+              <h3 class="timeline__role">Frontend Developer Intern</h3>
+              <p class="timeline__company">Tech Startup</p>
+              <p class="timeline__desc">
+                Developed responsive user interfaces, integrated REST APIs, and improved site performance. Worked closely with designers to translate Figma mockups into pixel-perfect code.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <span class="timeline__date">2022 — 2023</span>
+            <div class="timeline__card glass">
+              <h3 class="timeline__role">Self-Taught Developer</h3>
+              <p class="timeline__company">Online Courses & Projects</p>
+              <p class="timeline__desc">
+                Dove deep into web fundamentals — HTML, CSS, JavaScript, and Git. Built personal projects and participated in coding challenges to sharpen skills.
+              </p>
+            </div>
+          </li>
+        </ol>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- --- Resources Gallery Section --- -->
-  <section class="resources" id="resources">
-    <div class="container">
-      <h2 class="section-title">Teaching <span>Resources</span> & Insights</h2>
-      <div class="resources-grid">
-        
-        <!-- Resource 1 -->
-        <div class="glass-card resource-card">
-          <div class="resource-meta">
-            <span class="resource-category">Biology / Chemistry</span>
-            <span class="resource-type">Lesson Plan</span>
-          </div>
-          <h3>The Macromolecules of Life</h3>
-          <p>A comprehensive 2-week unit plan covering proteins, carbohydrates, lipids, and nucleic acids. Includes hands-on food tests and interactive online labs.</p>
-          <div class="resource-footer">
-            <span style="font-size: 0.85rem; color: var(--text-muted);">PDF | 2.4 MB</span>
-            <a href="#" class="download-link" onclick="alert('Downloading Sample: Macromolecules Lesson Plan'); return false;">
-              Download <span>↓</span>
-            </a>
-          </div>
+    <!-- ======================== PROJECTS ======================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__subtitle">Selected Work</p>
+          <h2 class="section__title">Projects</h2>
+          <p class="section__description">
+            A curated collection of projects that reflect my skills and interests.
+          </p>
         </div>
 
-        <!-- Resource 2 -->
-        <div class="glass-card resource-card">
-          <div class="resource-meta">
-            <span class="resource-category">Chemistry</span>
-            <span class="resource-type">Cheat Sheet</span>
-          </div>
-          <h3>Bohr Model Quick Reference</h3>
-          <p>A high-quality visual poster designed for classroom printing. Helps students easily memorize orbital configurations and electron shells for the first 20 elements.</p>
-          <div class="resource-footer">
-            <span style="font-size: 0.85rem; color: var(--text-muted);">PNG | 5.8 MB</span>
-            <a href="#" class="download-link" onclick="alert('Downloading Sample: Bohr Model Sheet'); return false;">
-              Download <span>↓</span>
-            </a>
-          </div>
-        </div>
+        <div class="projects__grid">
+          <!-- Project 1 -->
+          <article class="project-card glass">
+            <div class="project-card__image">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=375&fit=crop&q=80" alt="Dashboard web application showing analytics and charts" loading="lazy">
+              <div class="project-card__overlay">
+                <div class="project-card__overlay-links">
+                  <a href="#" class="project-card__overlay-link" aria-label="View source code">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="project-card__overlay-link" aria-label="View live demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Analytics Dashboard</h3>
+              <p class="project-card__desc">
+                A real-time analytics dashboard with interactive charts, filterable data views, and responsive layouts.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">React</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">Node.js</span>
+              </div>
+            </div>
+          </article>
 
-        <!-- Resource 3 -->
-        <div class="glass-card resource-card">
-          <div class="resource-meta">
-            <span class="resource-category">Self-Development</span>
-            <span class="resource-type">Workbook</span>
-          </div>
-          <h3>Atomic Habits for Teens</h3>
-          <p>A customized daily growth planner focusing on micro-habits, cognitive reframing, and study routine tracking. Great for advisory blocks or homeroom classes.</p>
-          <div class="resource-footer">
-            <span style="font-size: 0.85rem; color: var(--text-muted);">PDF | 1.1 MB</span>
-            <a href="#" class="download-link" onclick="alert('Downloading Sample: Habits Workbook'); return false;">
-              Download <span>↓</span>
-            </a>
-          </div>
-        </div>
+          <!-- Project 2 -->
+          <article class="project-card glass">
+            <div class="project-card__image">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=375&fit=crop&q=80" alt="Code editor showing a web application" loading="lazy">
+              <div class="project-card__overlay">
+                <div class="project-card__overlay-links">
+                  <a href="#" class="project-card__overlay-link" aria-label="View source code">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="project-card__overlay-link" aria-label="View live demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Dev Portfolio Generator</h3>
+              <p class="project-card__desc">
+                A CLI tool that scaffolds beautiful portfolio websites from a simple config file. Customizable themes and layouts.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">CLI</span>
+                <span class="tag">HTML/CSS</span>
+              </div>
+            </div>
+          </article>
 
+          <!-- Project 3 -->
+          <article class="project-card glass">
+            <div class="project-card__image">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=375&fit=crop&q=80" alt="Mobile application interface design" loading="lazy">
+              <div class="project-card__overlay">
+                <div class="project-card__overlay-links">
+                  <a href="#" class="project-card__overlay-link" aria-label="View source code">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="project-card__overlay-link" aria-label="View live demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Task Flow App</h3>
+              <p class="project-card__desc">
+                A minimalist task management app with drag-and-drop boards, real-time sync, and dark mode support.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">TypeScript</span>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- --- Contact Section --- -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2 class="section-title">Let's <span>Connect</span></h2>
-      <div class="contact-grid">
-        
-        <div class="contact-info">
-          <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Get in Touch</h3>
-          <p>Have questions about my curriculum designs, interested in booking a student development seminar, or want to collaborate? Send me a message!</p>
-          
-          <div class="info-item" style="margin-top: 1.5rem;">
-            <div class="info-icon">✉</div>
-            <div class="info-details">
-              <h4>Email</h4>
-              <p><a href="mailto:amrit.tiwarie@school.edu">amrit.tiwarie@school.edu</a></p>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon">⏰</div>
-            <div class="info-details">
-              <h4>Office Hours</h4>
-              <p>Mon - Fri: 3:30 PM - 5:00 PM</p>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon">📍</div>
-            <div class="info-details">
-              <h4>Location</h4>
-              <p>Greenwood Science Center, Lab 304</p>
-            </div>
-          </div>
+    <!-- ======================== CONTACT ======================== -->
+    <section class="section" id="contact" style="background: var(--color-slate-900);">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__subtitle">Let's Connect</p>
+          <h2 class="section__title">Get In Touch</h2>
+          <p class="section__description">
+            Have a question, a project idea, or just want to say hello? I'd love to hear from you.
+          </p>
         </div>
 
-        <div class="glass-card">
-          <div class="form-success-message" id="formSuccess">
-            Message Sent Successfully! I'll get back to you within 24 hours.
-          </div>
-          <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('contactForm').style.display='none'; document.getElementById('formSuccess').style.display='block';">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" class="form-control" placeholder="Jane Doe" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" class="form-control" placeholder="jane@example.com" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" class="form-control" placeholder="How can I help you?" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary form-submit">Send Message</button>
-          </form>
-        </div>
+        <div class="contact__grid">
+          <!-- Left: Info -->
+          <div class="contact__info">
+            <h3>Let's Build Something Together</h3>
+            <p>
+              I'm currently open to new opportunities and collaborations. Whether it's a freelance project, a full-time role, or an open-source contribution — let's talk.
+            </p>
 
+            <div class="contact__links">
+              <a href="mailto:amrit@example.com" class="contact__link" id="contact-email">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>amrit@example.com</span>
+              </a>
+              <a href="#" class="contact__link" id="contact-location">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span>Nepal</span>
+              </a>
+            </div>
+
+            <div class="contact__socials">
+              <a href="https://github.com/amrittiwarie" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="contact__form-wrapper">
+            <form class="form glass" id="contact-form" style="padding: var(--space-xl);" action="#" method="POST" novalidate>
+              <div class="form__group">
+                <label for="name" class="form__label">Name</label>
+                <input type="text" id="name" name="name" class="form__input" placeholder="Your name" required minlength="2" autocomplete="name">
+              </div>
+              <div class="form__group">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" id="email" name="email" class="form__input" placeholder="your@email.com" required autocomplete="email">
+              </div>
+              <div class="form__group">
+                <label for="message" class="form__label">Message</label>
+                <textarea id="message" name="message" class="form__textarea" placeholder="Tell me about your project..." required minlength="10"></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary form__submit" id="submit-btn">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- --- Footer --- -->
-  <footer>
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
     <div class="container">
-      <div class="footer-logo">A.TIWARIE</div>
-      <ul class="footer-nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Philosophy</a></li>
-        <li><a href="#timeline">Journey</a></li>
-        <li><a href="#lab">Interactive Lab</a></li>
-        <li><a href="#resources">Resources</a></li>
-      </ul>
-      <p class="footer-copy">&copy; 2026 Amrit Tiwarie. Built with passion for science and growth.</p>
+      <p class="footer__text">
+        &copy; 2026 <a href="#hero">Amrit Tiwari</a>. Crafted with care and clean code.
+      </p>
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>

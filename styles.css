@@ -428,7 +428,18 @@
   .hero__content {
     position: relative;
     z-index: 1;
-    max-inline-size: 44rem;
+  }
+
+  /* ---- Hero Split Layout ---- */
+  .hero__split {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3xl);
+  }
+
+  .hero__text {
+    flex: 1 1 55%;
+    min-inline-size: 0;
   }
 
   .hero__greeting {
@@ -468,6 +479,102 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-md);
+  }
+
+  /* ---- Hero Photo ---- */
+  .hero__photo-wrapper {
+    flex: 0 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__photo {
+    inline-size: clamp(16rem, 22vw, 24rem);
+    block-size: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: var(--radius-xl);
+    position: relative;
+    z-index: 2;
+    /* Blend: fade bottom edge into dark bg */
+    mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    filter: contrast(1.04) saturate(1.1);
+  }
+
+  /* Accent glow behind photo */
+  .hero__photo-glow {
+    position: absolute;
+    inset: -15%;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      color-mix(in oklab, var(--color-accent), transparent 55%),
+      color-mix(in oklab, var(--color-indigo-500), transparent 75%) 50%,
+      transparent 70%
+    );
+    z-index: 0;
+    filter: blur(40px);
+    animation: pulseGlow 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulseGlow {
+    0%   { opacity: 0.6; transform: scale(1); }
+    100% { opacity: 1;   transform: scale(1.08); }
+  }
+
+  /* Decorative ring around photo */
+  .hero__photo-ring {
+    position: absolute;
+    inset: -8px;
+    border-radius: calc(var(--radius-xl) + 8px);
+    border: 2px solid color-mix(in oklab, var(--color-accent), transparent 50%);
+    z-index: 1;
+    animation: ringRotate 12s linear infinite;
+    background: conic-gradient(
+      from 0deg,
+      transparent,
+      color-mix(in oklab, var(--color-accent), transparent 40%),
+      transparent,
+      color-mix(in oklab, var(--color-indigo-400), transparent 40%),
+      transparent
+    );
+    mask-image: linear-gradient(to bottom, #000 55%, transparent 95%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 95%);
+  }
+
+  @keyframes ringRotate {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Responsive: stack on mobile */
+  @media (max-width: 768px) {
+    .hero__split {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: var(--space-xl);
+    }
+
+    .hero__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero__photo {
+      inline-size: clamp(12rem, 50vw, 16rem);
+    }
+
+    .hero__actions {
+      justify-content: center;
+    }
+
+    .hero__description {
+      margin-inline: auto;
+    }
   }
 
   .hero__scroll-indicator {
@@ -930,7 +1037,8 @@
     .timeline__item,
     .project-card,
     .contact__info,
-    .contact__form-wrapper {
+    .contact__form-wrapper,
+    .hero__photo-wrapper {
       animation: fade-slide-up auto ease backwards;
       animation-timeline: view();
       animation-range: entry 0% entry 100%;

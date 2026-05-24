@@ -6,6 +6,9 @@
   <meta name="description" content="Amrit Tiwari — Science Educator & Physicist. M.Sc. Physics. Inspiring the next generation through engaging science education.">
   <title>Amrit Tiwari — Science Educator</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0f19'/%3E%3Ctext x='50' y='65' font-family='Georgia,serif' font-size='42' font-weight='bold' fill='%23e2b855' text-anchor='middle'%3EAK%3C/text%3E%3C/svg%3E">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -307,6 +310,69 @@
       </div>
     </section>
 
+    <!-- ======================== TESTIMONIALS ======================== -->
+    <section class="section" id="testimonials" style="background: var(--color-slate-900);">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__subtitle">What Students Say</p>
+          <h2 class="section__title">Student Testimonials</h2>
+          <p class="section__description">
+            Hear from students who have experienced the joy of learning science with AK.
+          </p>
+        </div>
+
+        <div class="testimonials__grid">
+          <blockquote class="testimonial-card glass">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-card__text">
+              "AK sir made Physics feel like magic. His experiments and real-world examples helped me fall in love with the subject. I scored 95+ in my board exams thanks to his guidance."
+            </p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">S</div>
+              <div>
+                <cite class="testimonial-card__name">Suman K.</cite>
+                <span class="testimonial-card__role">Class 12 Student</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card glass">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-card__text">
+              "The way he explains complex chemistry concepts with simple analogies is incredible. His notes are a lifesaver during exam season — clear, concise, and perfectly organized."
+            </p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">P</div>
+              <div>
+                <cite class="testimonial-card__name">Priya R.</cite>
+                <span class="testimonial-card__role">Class 11 Student</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card glass">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-card__text">
+              "My son struggled with science until AK sir started teaching him. Now he's genuinely curious and asks questions at home. As a parent, I couldn't be happier."
+            </p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">R</div>
+              <div>
+                <cite class="testimonial-card__name">Ramesh T.</cite>
+                <span class="testimonial-card__role">Parent</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
     <!-- ======================== RESOURCES ======================== -->
     <section class="section" id="resources" style="background: var(--color-slate-900);">
       <div class="container">
@@ -432,12 +498,6 @@
               <a href="https://github.com/amrittiwarie" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-github" aria-hidden="true"></i>
               </a>
-              <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-              </a>
               <a href="https://www.facebook.com/amrittiwarie" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
               </a>
@@ -446,7 +506,11 @@
 
           <!-- Right: Form -->
           <div class="contact__form-wrapper">
-            <form class="form glass" id="contact-form" style="padding: var(--space-xl);" action="#" method="POST" novalidate>
+            <form class="form glass" id="contact-form" style="padding: var(--space-xl);" action="https://formsubmit.co/amrittiwarie555@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="New message from AK Portfolio">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://amrittiwarie.github.io/Ak/#contact">
+              <input type="text" name="_honey" style="display:none">
               <div class="form__group">
                 <label for="name" class="form__label">Name</label>
                 <input type="text" id="name" name="name" class="form__input" placeholder="Your name" required minlength="2" autocomplete="name">
@@ -481,6 +545,11 @@
       </p>
     </div>
   </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/?text=Hi%20AK%20sir%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect!" class="whatsapp-fab" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
 
   <!-- Scripts -->
   <script src="script.js"></script>

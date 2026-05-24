@@ -983,6 +983,99 @@
     margin-block-start: var(--space-xs);
   }
 
+  /* ==========  TESTIMONIALS  ========== */
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: var(--space-xl);
+  }
+
+  .testimonial-card {
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    transition: transform var(--ui-transition), box-shadow var(--ui-transition);
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ui-shadow-lg);
+  }
+
+  .testimonial-card__stars {
+    display: flex;
+    gap: 0.15em;
+    color: var(--color-accent);
+    font-size: var(--size-sm);
+  }
+
+  .testimonial-card__text {
+    font-size: var(--size-base);
+    font-style: italic;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    flex: 1;
+  }
+
+  .testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-block-start: var(--space-xs);
+  }
+
+  .testimonial-card__avatar {
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+    color: var(--color-slate-950);
+    font-weight: 700;
+    font-size: var(--size-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .testimonial-card__name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--size-sm);
+    color: var(--color-text);
+    display: block;
+  }
+
+  .testimonial-card__role {
+    font-size: var(--size-xs);
+    color: var(--color-text-muted);
+  }
+
+  /* ==========  WHATSAPP FAB  ========== */
+  .whatsapp-fab {
+    position: fixed;
+    inset-block-end: var(--space-xl);
+    inset-inline-end: var(--space-xl);
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 3.5rem;
+    block-size: 3.5rem;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    font-size: 1.75rem;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    transition: transform var(--ui-transition), box-shadow var(--ui-transition);
+  }
+
+  .whatsapp-fab:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55);
+  }
+
   /* ==========  FOOTER  ========== */
   .footer {
     padding-block: var(--space-2xl);
@@ -1036,6 +1129,7 @@
     .skills__group,
     .timeline__item,
     .project-card,
+    .testimonial-card,
     .contact__info,
     .contact__form-wrapper,
     .hero__photo-wrapper {

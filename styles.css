@@ -761,6 +761,12 @@
   }
 
   .project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
     overflow: hidden;
     transition: transform var(--ui-transition), box-shadow var(--ui-transition);
   }
@@ -830,12 +836,24 @@
 
   .project-card__body {
     padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   .project-card__title {
     font-size: var(--size-xl);
     font-weight: 700;
     margin-block-end: var(--space-xs);
+    transition: color var(--ui-transition);
+  }
+
+  .project-card:hover .project-card__title {
+    color: var(--color-accent);
+  }
+
+  .project-card:has(.coming-soon-badge) .project-card__title {
+    padding-inline-end: 5.5rem;
   }
 
   .project-card__desc {
@@ -847,6 +865,30 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.35rem;
+    margin-block-start: auto;
+  }
+
+  /* --- Coming Soon Badge --- */
+  .coming-soon-badge {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: var(--color-accent);
+    color: var(--color-slate-950);
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    transition: transform var(--ui-transition), background var(--ui-transition);
+  }
+
+  .project-card:hover .coming-soon-badge {
+    transform: scale(1.05);
+    background: var(--color-accent-hover);
   }
 
   /* ==========  CONTACT  ========== */
